@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<!--
+
+starter: https://codesandbox.io/s/chat-css-challenge-m3u3p
+
+Modify the CSS only (do not change any HTML) to make the chat UI look as much like
+this screenshot as possible:
+https://imgur.com/RDqpPTp
+
+After 1 hour, you may look at the reference solution to see what you missed :
+https://codesandbox.io/s/chat-css-challenge-solution-1t5n0
+
+Advanced CSS features like Flexbox may be useful:
+- https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+
+
+For more information visit https://formation.dev/
+
+-->
+<html lang="en">
+  <head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    :root {
+      --color-chat: rgb(242, 243, 247);
+      --color-chat-bubble: rgb(230, 233, 239);
+      --color-viewer-chat-bubble: rgb(76, 148, 254);
+    }
+    body {
+      font-family: "Roboto", sans-serif;
+      font-weight: 300;
+      width: 100%;
+      height: 100%;
+      background: #999;
+    }
+
+    .chat {
+      /* let's leave these 5 properties alone */
+      border: 1px solid black;
+      width: calc(100% - 64px);
+      height: 400px;
+      background: var(--color-chat);
+      margin: auto;
+    }
+  </style>
+  <body>
+    <div class="chat">
+      <div class="messages">
+        <div class="viewer">
+          <span class="name">Mike</span>
+          <span>What kind of food do you like to eat?</span>
+        </div>
+        <div>
+          <span class="name">Annie</span>
+          <span>I like ice-cream</span>
+        </div>
+        <div>
+          <span class="name">Tom</span>
+          <span>I'm a vegetarian</span>
+        </div>
+        <div>
+          <span class="name">Jane</span>
+          <span>Fruit is my favoite</span>
+        </div>
+        <div>
+          <span class="name">Anne</span>
+          <span>Fruit's cool.</span>
+        </div>
+        <div>
+          <span class="name">Anne</span>
+          <span>I had a banana for breakfast</span>
+        </div>
+        <div>
+          <span class="name">Joe</span>
+          <span>I like ice cream too.</span>
+        </div>
+        <div class="viewer">
+          <span class="name">Mike</span>
+          <span>My favorite ice-cream flavor is chocoloate.</span>
+        </div>
+        <div>
+          <span class="name">Matt</span>
+          <span>
+            By the way, this text should be scrollable if the window is too
+            small. To test scrolling, you can click the "Open in New Window"
+            button to the right and above this iframe, or shrink this window.
+          </span>
+        </div>
+      </div>
+      <div class="send">
+        <input placeholder="say something..." />
+        <button>send</button>
+      </div>
+    </div>
+  </body>
+</html>
